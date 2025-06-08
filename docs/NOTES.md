@@ -1,53 +1,36 @@
-```
-project-root/
-├── jsconfig.json
-├── src/
-│   └── main.js
-└── node_modules/
-    └── shared/
-        └── types/
-            └── global-types.js
-```
+To fully leverage JSdoc types (simple way):
 
-**jsconfig.json**:
+- Do not autoload into objects, use require explicitly instead
+  - this would enable jump to definition as well
 
-```json
-{
-  "compilerOptions": {
-    "checkJs": true,
-    "baseUrl": "."
-  },
-  "include": ["node_modules/shared/types", "src"]
-}
-```
+That’s the practical minimum in JS:
 
-**node\_modules/shared/types/global-types.js**:
+* **JSDoc for DB collections**:
 
-```js
-// @ts-check
+  ```js
+  /** @typedef {{ id: string, name: string, createdAt: Date }} User */
+  ```
 
-/**
- * @typedef {Object} User
- * @property {number} id
- * @property {string} name
- */
+* **JSDoc for API responses**:
 
-/**
- * @typedef {Object} ApiResponse
- * @property {boolean} success
- * @property {any} [data]
- */
-```
+  ```js
+  /** @typedef {{ success: boolean, data?: any, error?: string }} ApiResponse */
+  ```
 
-**src/main.js**:
+* **JSDoc for utilities**:
 
-```js
-// @ts-check
-/// <reference path="../node_modules/shared/types/global-types.js" */
+  ```js
+  /**
+   * @param {string} email
+   * @returns {boolean}
+   */
+  function isValidEmail(email) { ... }
+  ```
 
-/** @type {User} */
-const user = { id: 1, name: "Alice" };
+That gives you:
 
-/** @type {ApiResponse} */
-const response = { success: true, data: user };
-```
+* Auto-complete
+* Type hints
+* Lint-level safety
+
+No need for TypeScript. Just enough structure for maintainability.

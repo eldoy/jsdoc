@@ -1,10 +1,13 @@
 // @ts-check
+export {}
+
+var util = require('../lib/util.js')
 
 /** @type User */
-const user = { id: 1, name: 'Alice' }
+var user = { id: 1, name: 'Alice' }
 
 /** @type ApiResponse */
-const response = { success: true, data: user }
+var response = { success: true, data: user }
 
 /** @type string */
 var hello = 'jsdoc'
@@ -20,10 +23,3 @@ function greet(name, count) {
 
 /** @type string */
 var result = greet('tekki', 0)
-
-/**
- * @param {AppContext} $
- */
-function homePage($) {
-  $.app.views.handleSomething({ foo: 'bar' })
-}
