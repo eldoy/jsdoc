@@ -32,35 +32,35 @@ With JSDoc + `@ts-check`, `tsc --noEmit`, and ESLint, we get strong type checkin
 
 ## Why JSDoc Works Better for Us
 
-### 1. Native Workflow
+#### 1. Native Workflow
 - Run `.js` directly
 - No output files
 
-### 2. Minimal Setup
+#### 2. Minimal Setup
 - No compiler, no new syntax
 
-### 3. Full JS Compatibility
+#### 3. Full JS Compatibility
 - Works with dynamic/runtime/metaprogramming
 
-### 4. Selective Typing
+#### 4. Selective Typing
 - Use `@ts-check` where needed
 
-### 5. Full Editor Support
+#### 5. Full Editor Support
 - Autocomplete, tooltips, jump-to-def
 
-### 6. Low Maintenance
+#### 6. Low Maintenance
 - Fewer type updates, no rewrites
 
-### 7. Fast Dev
+#### 7. Fast Dev
 - No compile delays, fewer false errors
 
-### 8. Lint-Ready
+#### 8. Lint-Ready
 - Works with ESLint, Prettier, `eslint-plugin-jsdoc`
 
-### 9. No `@types` Overhead
+#### 9. No `@types` Overhead
 - Optional use only
 
-### 10. Cleaner Code
+#### 10. Cleaner Code
 - Prefer simple functions and primitives
 
 ## What We Avoid
