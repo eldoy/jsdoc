@@ -20,3 +20,10 @@ function greet(name, count) {
 
 /** @type string */
 var result = greet('tekki', 0)
+
+/**
+ * @param {AppContext} $
+ */
+function homePage($) {
+  $.app.views.handleSomething({ foo: 'bar' })
+}
