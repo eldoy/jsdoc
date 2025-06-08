@@ -1,4 +1,3 @@
-```md
 # Why We Use JSDoc Instead of TypeScript
 
 We use JSDoc to keep our codebase simple, fast, and easy to maintain.
@@ -70,4 +69,3 @@ JSDoc is slightly more verbose but avoids rare, complex features like conditiona
 **Final Take**
 
 JSDoc gives us type safety, clarity, and tooling—without TypeScript's cost. Best for fast, flexible, native JavaScript workflows.
-```
